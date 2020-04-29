@@ -2,14 +2,14 @@
 
 <manifest>
   <remote name="openembedded" fetch="git://github.com/openembedded/" />
-  <remote name="riscv" fetch="git://github.com/sateesh0457/" />
+  <remote name="sateesh0457" fetch="git://github.com/sateesh0457/" />
   <remote name="yocto" fetch="git://git.yoctoproject.org/" />
   <default remote="openembedded" revision="master" />
 
-  <project name="meta-kiran" remote="riscv" path="meta-kiran" revision="master" />
+  <project name="meta-kiran" remote="sateesh0457" path="meta-kiran" revision="master" />
   <project name="openembedded-core" remote="openembedded" path="openembedded-core" revision="master" />
   <project name="bitbake" remote="openembedded" path="openembedded-core/bitbake" revision="master" />
-  <project name="meta-openembedded" remote="openembedded" path="meta-openembedded" revision="master" />
+ 
 
 </manifest>
 
