@@ -1,10 +1,10 @@
 #!/bin/bash
 # Bootstrapper for buildbot slave
 
-DIR="build"
+DIR="exaleap-build"
 MACHINE="qemuriscv64"
 CONFFILE="conf/auto.conf"
-BITBAKEIMAGE="core-image-full-cmdline"
+BITBAKEIMAGE="core-image-minimal"
 
 # make sure sstate is there
 #echo "Creating sstate directory"
@@ -36,11 +36,7 @@ export BASH_SOURCE="openembedded-core/oe-init-build-env"
 
 # add the missing layers
 echo "Adding layers"
-bitbake-layers add-layer ../meta-openembedded/meta-oe
-bitbake-layers add-layer ../meta-openembedded/meta-python
-bitbake-layers add-layer ../meta-openembedded/meta-multimedia
-bitbake-layers add-layer ../meta-openembedded/meta-networking
-bitbake-layers add-layer ../meta-riscv
+bitbake-layers add-layer ../meta-kiran
 
 # fix the configuration
 echo "Creating auto.conf"
